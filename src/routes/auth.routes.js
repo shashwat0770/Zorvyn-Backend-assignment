@@ -32,7 +32,7 @@ const loginSchema = z.object({
  * /api/auth/register:
  *   post:
  *     tags: [Auth]
- *     summary: Register a new user account (default role: viewer)
+ *     summary: "Register a new user account (default role: viewer)"
  *     security: []
  *     requestBody:
  *       required: true

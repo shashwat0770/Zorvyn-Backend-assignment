@@ -86,7 +86,7 @@ app.use(errorHandler);
 
 /* ── Start ───────────────────────────────────────────────────────────────  */
 app.listen(PORT, () => {
-  console.log(`\n🚀  Zorvyn Finance API running on http://localhost:${PORT}`);
+  console.log(`\n🚀  Server running on port ${PORT}`);
   console.log(`📖  Swagger docs  →  http://localhost:${PORT}/api-docs`);
   console.log(`🌍  Environment   →  ${process.env.NODE_ENV || 'development'}\n`);
 });
