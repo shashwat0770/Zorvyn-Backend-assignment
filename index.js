@@ -74,6 +74,13 @@ app.use(
 app.get('/api-docs.json', (req, res) => res.json(swaggerSpec));
 
 /* ── API Routes ─────────────────────────────────────────────────────────── */
+app.get('/', (req, res) => {
+  res.json({
+    success: true,
+    message: 'Zorvyn Finance API is running',
+    docs: '/api-docs'
+  });
+});
 app.use('/api', apiRouter);
 
 /* ── 404 Handler ─────────────────────────────────────────────────────────  */
@@ -87,8 +94,6 @@ app.use(errorHandler);
 /* ── Start ───────────────────────────────────────────────────────────────  */
 app.listen(PORT, () => {
   console.log(`\n🚀  Server running on port ${PORT}`);
-  console.log(`📖  Swagger docs  →  http://localhost:${PORT}/api-docs`);
-  console.log(`🌍  Environment   →  ${process.env.NODE_ENV || 'development'}\n`);
 });
 
 module.exports = app; // Export for testing
